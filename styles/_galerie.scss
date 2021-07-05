@@ -1,0 +1,53 @@
+#galerie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Intro galerie
+
+    .intro-galerie{
+        width: 100%;
+        background-color: $dark-orange;
+        padding-top: 25px;
+        padding-bottom:50px ;
+        position: relative;
+        top: -20px;
+        h2{
+            color: white;
+            font-size: 45px;
+            margin-block-start: 25px;
+            margin-block-end: 25px;
+            font-family: $benne;
+            @media screen and (max-width: 768px) {
+                 font-size: 35px;   
+                }
+                @media screen and (max-width: 375px) {
+                     font-size: 30px;   
+                    }
+        }
+        p{
+            width: 30%;
+            font-size: 25px;
+            color: white;
+            margin: auto;
+            line-height: 40px;
+            font-family: $poppins;
+            @media screen and (max-width: 1170px) {
+                    width: 50% ;
+                }
+            @media screen and (max-width: 768px) {
+                    font-size: 20px;   
+                }
+                @media screen and (max-width: 570px) {
+                        width: 80%;
+                    }
+        }
+    }
+
+    // ------------------------------------------------
+
+    // Galerie
+    .the-galerie{
+        margin-block-start: 50px;
+    }
+}

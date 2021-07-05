@@ -1,0 +1,143 @@
+// Titre
+
+.titre-faq {
+    width: 100%;
+    position: relative;
+    top: -20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $dark-orange;
+
+    h2 {
+        font-size: 45px;
+        color: white;
+        font-family: $benne;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+             font-size: 35px;   
+            }
+            @media screen and (max-width: 375px) {
+                 font-size: 30px;   
+                }
+    }
+}
+
+// ------------------------------------------------
+
+// Faq
+
+article {
+    .faq-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // Bloc différentes questions
+
+        dl {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            align-items: center;
+            font-family: $poppins;
+            @media screen and (max-width: 1459px) {
+                    width: 50%;
+                }
+                @media screen and (max-width: 1175px) {
+                        width: 60%;
+                    }
+                    @media screen and (max-width: 883px) {
+                        width: 75%;
+                    } 
+                    @media screen and (max-width: 768px) {
+                            width: 80%;
+                        }
+                        @media screen and (max-width: 570px) {
+                            width: 90%;
+                        }
+                        @media screen and (max-width: 440px) {
+                                width: 95%;
+                            }
+
+            // Question
+
+            dt {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-block-start: 25px;
+                font-size: 30px;
+                background-color: $dark-orange;
+                border: 2px solid $dark-orange;
+                padding-left: 10px;
+                color: white;
+                @media screen and (max-width: 1175px) {
+                    font-size: 28px;
+                }
+                @media screen and (max-width: 919px) {
+                        font-size: 26px;
+                    }
+                    @media screen and (max-width: 883px) {
+                            font-size: 25px;
+                        }   
+                        @media screen and (max-width: 616px) {
+                                font-size: 23px;
+                            }
+                            @media screen and (max-width: 570px) {
+                                    font-size: 20px;
+                                }
+
+                // Icone
+
+                .chevron {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    background-color: white;
+                    i {
+                        color: $light-orange;
+                    }
+                }
+            }
+
+            // Réponse
+
+            dd {
+                display: none;
+                width: 100%;
+                font-size: 25px;
+                border: 7px solid $dark-orange;
+                border-top: none;
+
+                @media screen and (max-width: 1175px) {
+                    font-size: 25px;
+                }
+                @media screen and (max-width: 919px) {
+                        font-size: 23px;
+                    }
+                    @media screen and (max-width: 883px) {
+                            font-size: 22px;
+                        }   
+                        @media screen and (max-width: 616px) {
+                                font-size: 21px;
+                            }
+                            @media screen and (max-width: 570px) {
+                                    font-size: 20px;
+                                }
+                                
+                p{
+                    padding: 25px;
+                    text-align: justify;
+                }            
+            }
+        }
+
+        .Q-un,.Q-deux,.Q-trois,.Q-quatre,.Q-cinq,.Q-six,.Q-sept {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

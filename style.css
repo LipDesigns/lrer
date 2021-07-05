@@ -1,0 +1,2281 @@
+@charset "UTF-8";
+/*
+Theme Name: Squirell
+Author: Filipe Veiga
+Description: un thème
+Version: 1.0
+Tags: blanc, noir, juif, musulman
+Text domain: nom du domaine
+*/
+.phone {
+  top: 175px;
+  right: 0;
+  z-index: 3;
+  position: fixed;
+  background-color: #FF7A00;
+  border-radius: 5px 0 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phone a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 35px;
+}
+
+.phone a i {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  text-align: center;
+  padding-inline: 5px;
+}
+
+.phone a #telephone {
+  display: none;
+}
+
+.phone a #telephone p {
+  opacity: 0;
+  color: #FF7A00;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-padding-start: 5px;
+          padding-inline-start: 5px;
+}
+
+.phone a .telephone {
+  display: block !important;
+  -webkit-animation: slide 0.3s;
+          animation: slide 0.3s;
+}
+
+.phone a .telephone p {
+  -webkit-animation: apparition 0.3s ease-in-out 0.3s forwards;
+          animation: apparition 0.3s ease-in-out 0.3s forwards;
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.phone:hover {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+.phone:hover i {
+  color: #FF7A00;
+}
+
+header.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: none;
+  -webkit-transition: 1s !important;
+  transition: 1s !important;
+  padding-bottom: 0;
+}
+
+header.sticky .logo img {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+header.sticky .pre-nav h1 {
+  color: white;
+  display: none;
+}
+
+header.sticky .pre-nav hr {
+  display: none;
+}
+
+header.sticky nav {
+  background-color: rgba(225, 107, 83, 0.9);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header.sticky nav .full-nav {
+  display: none;
+  -webkit-animation: fadeOnSticky;
+          animation: fadeOnSticky;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@media screen and (max-width: 768px) {
+  header.sticky nav .full-nav {
+    display: none;
+  }
+}
+
+header.sticky nav .overlay .overlay-content .menu-nav-container ul li a {
+  font-size: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  header.sticky nav .overlay .overlay-content .menu-nav-container ul li a {
+    font-size: 25px;
+  }
+}
+
+header.sticky nav a.closebtn {
+  top: 1px;
+}
+
+@media screen and (max-width: 440px) {
+  header.sticky nav a.closebtn {
+    right: 15px;
+  }
+}
+
+header.sticky .btn-burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  color: white;
+}
+
+@media screen and (max-width: 440px) {
+  header.sticky .btn-burger {
+    right: 15px;
+  }
+}
+
+header {
+  background: url(http://lrer.lip-designs.com/wp-content/uploads/2021/06/halfcircle_pattern.png) center bottom repeat-x;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 30px;
+}
+
+header nav {
+  background-color: white;
+}
+
+header nav .pre-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .pre-nav .logo img {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header nav .pre-nav h1 {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  font-family: "Benne";
+  font-size: 25px;
+}
+
+header nav .pre-nav hr {
+  background-color: #FF7A00;
+  margin-bottom: 10px;
+  border: 0;
+}
+
+header nav .pre-nav hr:nth-of-type(1) {
+  width: 100px;
+  height: 2px;
+}
+
+header nav .pre-nav hr:nth-of-type(2) {
+  width: 50px;
+  height: 2px;
+}
+
+@media (max-width: 768px) {
+  header nav .full-nav {
+    display: none;
+  }
+}
+
+header nav .full-nav .menu-nav-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .full-nav .menu-nav-container ul li {
+  -webkit-margin-before: 20px;
+          margin-block-start: 20px;
+  padding-right: 20px;
+}
+
+header nav .full-nav .menu-nav-container ul li a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+header nav .full-nav .menu-nav-container ul li a:hover {
+  border-bottom: 2px solid #FF7A00;
+}
+
+@media screen and (max-width: 1149px) {
+  header nav .full-nav .menu-nav-container ul li a {
+    font-size: 15px;
+  }
+}
+
+header nav .full-nav .menu-nav-container ul li a:hover {
+  color: #FF7A00;
+}
+
+header nav .btn-burger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header nav .btn-burger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+header nav .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  background-color: #E16B53;
+  overflow-x: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav .overlay .overlay-content {
+  position: relative;
+  height: 90%;
+  text-align: center;
+  margin: 0;
+}
+
+header nav .overlay .overlay-content .menu-nav-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .overlay .overlay-content .menu-nav-container .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+}
+
+header nav .overlay .overlay-content .menu-nav-container .menu li a {
+  margin: 0;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav .overlay .overlay-content .menu-nav-container .menu li a:hover, header nav .overlay .overlay-content .menu-nav-container .menu li a:focus {
+  border-bottom: 5px solid white;
+}
+
+header nav a.closebtn {
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  right: 15px;
+  font-size: 60px;
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  header nav a.closebtn {
+    top: 48px;
+  }
+}
+
+.hero .wp-block-column figure img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .hero .wp-block-column figure img {
+    height: 500px;
+  }
+}
+
+@-webkit-keyframes fadeOnSticky {
+  0% {
+    display: block;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fadeOnSticky {
+  0% {
+    display: block;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.titre-blog {
+  width: 100%;
+  position: relative;
+  top: -20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #E16B53;
+}
+
+.titre-blog h2 {
+  font-size: 45px;
+  color: white;
+  font-family: "Benne";
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .titre-blog h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .titre-blog h2 {
+    font-size: 30px;
+  }
+}
+
+p.has-text-align-center {
+  width: 40%;
+  font-size: 25px;
+  margin: auto;
+  font-family: "Poppins";
+}
+
+.blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+}
+
+@media screen and (max-width: 650px) {
+  .blog {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.blog article {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-margin-before: 100px;
+          margin-block-start: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+  .blog article {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 816px) {
+  .blog article {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .blog article {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .blog article {
+    width: 80%;
+  }
+}
+
+.blog article img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blog article .extrait {
+  background-color: #E16B53;
+  padding: 10px;
+  min-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 1503px) {
+  .blog article .extrait {
+    min-height: 380px;
+  }
+}
+
+@media screen and (max-width: 1447px) {
+  .blog article .extrait {
+    min-height: 430px;
+  }
+}
+
+@media screen and (max-width: 1198px) {
+  .blog article .extrait {
+    min-height: 475px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .blog article .extrait {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .blog article .extrait {
+    min-height: 350px;
+  }
+}
+
+@media screen and (max-width: 898px) {
+  .blog article .extrait {
+    min-height: 493px;
+  }
+}
+
+.blog article .extrait h3 {
+  text-align: center;
+  font-size: 30px;
+  margin: auto;
+  margin-bottom: 0;
+  -webkit-margin-before: 15px;
+          margin-block-start: 15px;
+  font-family: "Poppins";
+  width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .blog article .extrait h3 {
+    font-size: 25px;
+  }
+}
+
+.blog article .extrait h3 a {
+  text-decoration: none;
+  color: white;
+}
+
+.blog article .extrait p {
+  width: 90%;
+  text-align: center;
+  font-size: 25px;
+  margin: auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blog article .extrait p a {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.blog article .extrait .see-more {
+  -webkit-margin-before: 15px;
+          margin-block-start: 15px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.blog article .extrait .see-more button {
+  background-color: #E16B53;
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.blog article .extrait .see-more button:hover {
+  border: inherit;
+  background-color: white;
+  color: #FF7A00;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.pagination-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+}
+
+.pagination-btns .prev-posts-btn {
+  position: absolute;
+  left: 50px;
+}
+
+.pagination-btns .prev-posts-btn a {
+  text-decoration: none;
+  color: #FF7A00;
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+.pagination-btns .next-posts-btn {
+  position: absolute;
+  right: 50px;
+}
+
+.pagination-btns .next-posts-btn a {
+  text-decoration: none;
+  color: #FF7A00;
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+.adherer .wp-block-group__inner-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E16B53;
+  position: relative;
+  top: -20px;
+}
+
+.adherer .wp-block-group__inner-container i {
+  color: white;
+}
+
+.adherer .wp-block-group__inner-container h2 {
+  font-size: 45px;
+  color: white;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 768px) {
+  .adherer .wp-block-group__inner-container h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .adherer .wp-block-group__inner-container h2 {
+    font-size: 30px;
+  }
+}
+
+.adherer .wp-block-group__inner-container p {
+  width: 30%;
+  text-align: center;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  color: white;
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 874px) {
+  .adherer .wp-block-group__inner-container p {
+    font-size: 20px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .adherer .wp-block-group__inner-container p {
+    width: 80%;
+  }
+}
+
+.adherer .wp-block-group__inner-container .wp-block-buttons {
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+}
+
+.adherer .wp-block-group__inner-container .wp-block-buttons .wp-block-button a {
+  background-color: white;
+  color: #FF7A00;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: "Poppins";
+}
+
+.adherer .wp-block-group__inner-container .wp-block-buttons .wp-block-button a:hover {
+  color: white;
+  background-color: #E16B53;
+  border: 2px solid white;
+}
+
+.faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+@media screen and (max-width: 1035px) {
+  .faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container {
+    width: 80%;
+  }
+}
+
+.faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container .wp-block-group {
+  width: 100%;
+}
+
+.faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container .wp-block-group i {
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+  color: #FF7A00;
+}
+
+.faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container .wp-block-group h3 {
+  font-size: 35px;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  color: #FF7A00;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 414px) {
+  .faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container .wp-block-group h3 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container .wp-block-group h3 {
+    font-size: 25px;
+  }
+}
+
+.faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container p {
+  font-size: 25px;
+  line-height: 40px;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 768px) {
+  .faq-adherer .wp-block-column .pourquoi .wp-block-group__inner-container p {
+    font-size: 20px;
+  }
+}
+
+.faq-adherer .wp-block-column .a-quoi .wp-block-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.faq-adherer .wp-block-column .a-quoi .wp-block-column .wp-block-group i {
+  color: #FF7A00;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+}
+
+.faq-adherer .wp-block-column .a-quoi .wp-block-column .wp-block-group h3 {
+  font-size: 35px;
+  color: #FF7A00;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 414px) {
+  .faq-adherer .wp-block-column .a-quoi .wp-block-column .wp-block-group h3 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .faq-adherer .wp-block-column .a-quoi .wp-block-column .wp-block-group h3 {
+    font-size: 25px;
+  }
+}
+
+.faq-adherer .wp-block-column .a-quoi .wp-block-column p {
+  font-size: 25px;
+  width: 50%;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  line-height: 40px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 768px) {
+  .faq-adherer .wp-block-column .a-quoi .wp-block-column p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .faq-adherer .wp-block-column .a-quoi .wp-block-column p {
+    width: 80%;
+  }
+}
+
+.aider .wp-block-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.aider .wp-block-column i {
+  color: #FF7A00;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+}
+
+.aider .wp-block-column h3 {
+  font-size: 35px;
+  color: #FF7A00;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 414px) {
+  .aider .wp-block-column h3 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .aider .wp-block-column h3 {
+    font-size: 25px;
+  }
+}
+
+.aider .wp-block-column p {
+  font-size: 25px;
+  width: 50%;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  line-height: 40px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 768px) {
+  .aider .wp-block-column p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .aider .wp-block-column p {
+    width: 80%;
+  }
+}
+
+.share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.share .wp-block-button a {
+  background-color: #E16B53;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: "Poppins";
+}
+
+.share .wp-block-button a:hover {
+  background-color: white;
+  border: 1px solid #FF7A00;
+  color: #FF7A00;
+}
+
+#galerie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#galerie .intro-galerie {
+  width: 100%;
+  background-color: #E16B53;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  position: relative;
+  top: -20px;
+}
+
+#galerie .intro-galerie h2 {
+  color: white;
+  font-size: 45px;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 768px) {
+  #galerie .intro-galerie h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #galerie .intro-galerie h2 {
+    font-size: 30px;
+  }
+}
+
+#galerie .intro-galerie p {
+  width: 30%;
+  font-size: 25px;
+  color: white;
+  margin: auto;
+  line-height: 40px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 1170px) {
+  #galerie .intro-galerie p {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #galerie .intro-galerie p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #galerie .intro-galerie p {
+    width: 80%;
+  }
+}
+
+#galerie .the-galerie {
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+}
+
+.contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #E16B53;
+  position: relative;
+  top: -20px;
+}
+
+.contact .wp-block-column {
+  text-align: center;
+}
+
+.contact .wp-block-column h2 {
+  color: white;
+  font-size: 45px;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 440px) {
+  .contact .wp-block-column h2 {
+    font-size: 40px;
+  }
+}
+
+.warning {
+  width: 500px;
+  margin: auto;
+}
+
+@media screen and (max-width: 499px) {
+  .warning {
+    width: 100%;
+  }
+}
+
+.warning .wp-block-column {
+  background-color: #E16B53;
+  padding: 25px;
+  -webkit-box-shadow: 12px 12px 2px 1px rgba(255, 122, 0, 0.3);
+          box-shadow: 12px 12px 2px 1px rgba(255, 122, 0, 0.3);
+}
+
+.warning .wp-block-column p {
+  width: 80%;
+  color: white;
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 768px) {
+  .warning .wp-block-column p {
+    font-size: 20px;
+  }
+}
+
+.infos-contact {
+  width: 100%;
+  margin: auto;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+  -webkit-margin-after: 150px;
+          margin-block-end: 150px;
+}
+
+@media screen and (max-width: 1044px) {
+  .infos-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.infos-contact .infos {
+  width: 100%;
+  -webkit-margin-end: 50px;
+          margin-inline-end: 50px;
+}
+
+@media screen and (max-width: 1044px) {
+  .infos-contact .infos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    -webkit-margin-before: 50px;
+            margin-block-start: 50px;
+  }
+}
+
+.infos-contact .infos h2 {
+  width: 300px;
+  background-color: #E16B53;
+  font-size: 25px;
+  padding: 25px;
+  margin: auto;
+  color: white;
+  font-family: "Benne";
+}
+
+.infos-contact .wp-block-columns .wp-block-column p {
+  width: 300px;
+  margin: auto;
+  padding: 25px;
+  background-color: whitesmoke;
+  line-height: 40px;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+
+.infos-contact .form {
+  background-color: #E16B53;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 30% !important;
+      flex-basis: 30% !important;
+  padding: 25px;
+  -webkit-margin-end: 25px;
+          margin-inline-end: 25px;
+}
+
+@media screen and (max-width: 1044px) {
+  .infos-contact .form {
+    -webkit-margin-before: 50px;
+            margin-block-start: 50px;
+    -webkit-margin-end: 0;
+            margin-inline-end: 0;
+  }
+}
+
+.infos-contact .form .wpcf7 form {
+  width: 100%;
+}
+
+.infos-contact .form .wpcf7 form h3 {
+  font-size: 35px;
+  color: white;
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+  text-align: center;
+  font-family: "Benne";
+}
+
+.infos-contact .form .wpcf7 form h3 i {
+  -webkit-margin-end: 10px;
+          margin-inline-end: 10px;
+}
+
+.infos-contact .form .wpcf7 form p {
+  font-size: 20px;
+  color: white;
+  font-family: "Poppins";
+}
+
+.infos-contact .form .wpcf7 form p i {
+  -webkit-margin-end: 10px;
+          margin-inline-end: 10px;
+}
+
+.infos-contact .form .wpcf7 form p label span input {
+  height: 25px;
+  outline: none;
+  -webkit-margin-before: 15px;
+          margin-block-start: 15px;
+  -webkit-margin-after: 15px;
+          margin-block-end: 15px;
+  width: 100%;
+}
+
+.infos-contact .form .wpcf7 form p label span select {
+  height: 30px;
+  -webkit-margin-before: 15px;
+          margin-block-start: 15px;
+  -webkit-margin-after: 15px;
+          margin-block-end: 15px;
+  outline: none;
+  width: 100%;
+}
+
+.infos-contact .form .wpcf7 form p label span textarea {
+  width: 100%;
+  outline: none;
+}
+
+.infos-contact .form .wpcf7 form p label span textarea::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+.infos-contact .form .wpcf7 form p label span textarea:-ms-input-placeholder {
+  font-size: 20px;
+}
+
+.infos-contact .form .wpcf7 form p label span textarea::-ms-input-placeholder {
+  font-size: 20px;
+}
+
+.infos-contact .form .wpcf7 form p label span textarea::placeholder {
+  font-size: 20px;
+}
+
+.infos-contact .form .wpcf7 form p:nth-of-type(5) input {
+  height: 35px;
+  width: 150px;
+  border-radius: 20px;
+  border: none;
+  color: #FF7A00;
+  background-color: white;
+  font-size: 25px;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  font-family: "Benne";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.infos-contact .form .wpcf7 form p:nth-of-type(5) input:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: #E16B53;
+}
+
+.map {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E16B53;
+  padding-top: 25px;
+}
+
+.map iframe {
+  width: 100%;
+}
+
+.map h3 {
+  font-size: 45px;
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+  color: white;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 768px) {
+  .map h3 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .map h3 {
+    font-size: 35px;
+  }
+}
+
+.half-circle {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  bottom: 20px;
+  background: url(http://localhost/refugeecureuilroux/wp-content/uploads/2021/06/halfcircle_pattern.png) center bottom repeat-x;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.titre-faq {
+  width: 100%;
+  position: relative;
+  top: -20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #E16B53;
+}
+
+.titre-faq h2 {
+  font-size: 45px;
+  color: white;
+  font-family: "Benne";
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .titre-faq h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .titre-faq h2 {
+    font-size: 30px;
+  }
+}
+
+article .faq-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article .faq-content dl {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 1459px) {
+  article .faq-content dl {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1175px) {
+  article .faq-content dl {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 883px) {
+  article .faq-content dl {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  article .faq-content dl {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  article .faq-content dl {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  article .faq-content dl {
+    width: 95%;
+  }
+}
+
+article .faq-content dl dt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  font-size: 30px;
+  background-color: #E16B53;
+  border: 2px solid #E16B53;
+  padding-left: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 1175px) {
+  article .faq-content dl dt {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 919px) {
+  article .faq-content dl dt {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 883px) {
+  article .faq-content dl dt {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 616px) {
+  article .faq-content dl dt {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  article .faq-content dl dt {
+    font-size: 20px;
+  }
+}
+
+article .faq-content dl dt .chevron {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  background-color: white;
+}
+
+article .faq-content dl dt .chevron i {
+  color: #FF7A00;
+}
+
+article .faq-content dl dd {
+  display: none;
+  width: 100%;
+  font-size: 25px;
+  border: 7px solid #E16B53;
+  border-top: none;
+}
+
+@media screen and (max-width: 1175px) {
+  article .faq-content dl dd {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 919px) {
+  article .faq-content dl dd {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 883px) {
+  article .faq-content dl dd {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 616px) {
+  article .faq-content dl dd {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  article .faq-content dl dd {
+    font-size: 20px;
+  }
+}
+
+article .faq-content dl dd p {
+  padding: 25px;
+  text-align: justify;
+}
+
+article .faq-content .Q-un, article .faq-content .Q-deux, article .faq-content .Q-trois, article .faq-content .Q-quatre, article .faq-content .Q-cinq, article .faq-content .Q-six, article .faq-content .Q-sept {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.orange-box {
+  width: 100%;
+  height: 200px;
+  background-color: #E16B53;
+  -webkit-margin-before: 150px;
+          margin-block-start: 150px;
+}
+
+.halfcircle {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  bottom: 20px;
+  background: url(http://lrer.lip-designs.com/wp-content/uploads/2021/06/halfcircle_pattern.png) center bottom repeat-x;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#page-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#page-404 span {
+  font-size: 45px;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+#page-404 a button {
+  color: white;
+  background-color: #E16B53;
+  width: 250px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+}
+
+@media screen and (max-width: 440px) {
+  #page-404 a button {
+    width: 200px;
+    font-size: 18px;
+  }
+}
+
+#page-404 a button:hover {
+  background-color: inherit;
+  border: 2px solid #E16B53;
+  color: #E16B53;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.top-orange-box {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  top: -20px;
+  background-color: #E16B53;
+}
+
+#titre-blog p {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  #titre-blog p {
+    width: 80%;
+  }
+}
+
+#singlearticle {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+#singlearticle .back-to-blog {
+  border: none;
+  height: 50px;
+  -webkit-margin-after: 100px;
+          margin-block-end: 100px;
+  padding: 15px;
+  background-color: inherit;
+  outline: none;
+}
+
+#singlearticle .back-to-blog a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-family: "Poppins";
+  color: #FF7A00;
+}
+
+#singlearticle h2 {
+  font-size: 45px;
+  font-family: "Benne";
+}
+
+#singlearticle span p {
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+#singlearticle figure {
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+}
+
+#singlearticle figure .wp-block-embed__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+}
+
+#singlearticle .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-margin-before: 100px;
+          margin-block-start: 100px;
+}
+
+#singlearticle .pagination .prev a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-family: "Poppins";
+  color: #FF7A00;
+}
+
+#singlearticle .pagination .next a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-family: "Poppins";
+  color: #FF7A00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero {
+  position: relative;
+  top: -20px;
+}
+
+.hero .wp-block-column figure img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.presentation h2 {
+  font-size: 45px;
+  color: #FF7A00;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 768px) {
+  .presentation h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .presentation h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .presentation h2 {
+    font-size: 30px;
+  }
+}
+
+.presentation p.has-text-align-center {
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  font-size: 25px;
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 768px) {
+  .presentation p.has-text-align-center {
+    font-size: 20px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .presentation p.has-text-align-center {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .presentation p.has-text-align-center {
+    width: 80%;
+  }
+}
+
+.presentation .wp-block-columns {
+  width: 60%;
+  margin: auto;
+  -webkit-margin-before: 80px;
+          margin-block-start: 80px;
+}
+
+@media screen and (max-width: 781px) {
+  .presentation .wp-block-columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.presentation .wp-block-columns .wp-block-column {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.presentation .wp-block-columns .wp-block-column i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: #FF7A00;
+  border-radius: 100px;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+}
+
+.presentation .wp-block-columns .wp-block-column p {
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 375px) {
+  .presentation .wp-block-columns .wp-block-column p {
+    font-size: 20px;
+  }
+}
+
+.wp-block-columns .ecureuil-roux {
+  width: 80%;
+  -webkit-margin-before: 100px;
+          margin-block-start: 100px;
+}
+
+.wp-block-columns .ecureuil-roux h3 {
+  font-size: 45px;
+  color: #FF7A00;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 768px) {
+  .wp-block-columns .ecureuil-roux h3 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wp-block-columns .ecureuil-roux h3 {
+    font-size: 30px;
+  }
+}
+
+.wp-block-columns .ecureuil-roux .wp-block-columns {
+  width: 60%;
+  margin: auto;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .wp-block-columns .ecureuil-roux .wp-block-columns {
+    width: 100%;
+  }
+}
+
+.wp-block-columns .ecureuil-roux .wp-block-columns figure img {
+  width: 100%;
+  height: auto;
+}
+
+.wp-block-columns .ecureuil-roux .wp-block-columns .wp-block-column:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+}
+
+.wp-block-columns .ecureuil-roux .wp-block-columns .wp-block-column:nth-of-type(2) h4 {
+  -webkit-margin-after: 15px;
+          margin-block-end: 15px;
+  font-size: 30px;
+  font-family: "Benne";
+}
+
+.wp-block-columns .ecureuil-roux .wp-block-columns .wp-block-column:nth-of-type(2) p {
+  width: 80%;
+  font-family: "Poppins";
+  -webkit-margin-after: 50px;
+          margin-block-end: 50px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+  .wp-block-columns .ecureuil-roux .wp-block-columns .wp-block-column:nth-of-type(2) p {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wp-block-columns .ecureuil-roux .wp-block-columns .wp-block-column:nth-of-type(2) p {
+    font-size: 20px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wp-block-columns .ecureuil-roux .wp-block-columns .wp-block-column:nth-of-type(2) p {
+    text-align: center;
+  }
+}
+
+.beatrice .wp-block-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.beatrice .wp-block-column h3 {
+  font-size: 45px;
+  color: #FF7A00;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 768px) {
+  .beatrice .wp-block-column h3 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .beatrice .wp-block-column h3 {
+    font-size: 30px;
+  }
+}
+
+.beatrice .wp-block-column .intro-beatrice {
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+  font-size: 25px;
+  width: 50%;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 768px) {
+  .beatrice .wp-block-column .intro-beatrice {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .beatrice .wp-block-column .intro-beatrice {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .beatrice .wp-block-column .intro-beatrice {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .beatrice .wp-block-column figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.beatrice .wp-block-column figure img {
+  border: 10px solid #FF7A00;
+}
+
+@media screen and (max-width: 768px) {
+  .beatrice .wp-block-column figure img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.beatrice .wp-block-column .nom {
+  width: 100%;
+  text-align: center;
+  -webkit-margin-after: 10px;
+          margin-block-end: 10px;
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 768px) {
+  .beatrice .wp-block-column .nom {
+    font-size: 20px;
+  }
+}
+
+.beatrice .wp-block-column hr {
+  background-color: #FF7A00;
+  margin-bottom: 10px;
+  border: 0;
+  width: 100px;
+  height: 2px;
+}
+
+.beatrice .wp-block-column .metier {
+  width: 100%;
+  text-align: center;
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 768px) {
+  .beatrice .wp-block-column .metier {
+    font-size: 15px;
+  }
+}
+
+.beatrice .wp-block-column .histoire-beatrice {
+  width: 50%;
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 768px) {
+  .beatrice .wp-block-column .histoire-beatrice {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .beatrice .wp-block-column .histoire-beatrice {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .beatrice .wp-block-column .histoire-beatrice {
+    width: 80%;
+  }
+}
+
+.wp-block-columns .galerie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-margin-after: 100px;
+          margin-block-end: 100px;
+}
+
+.wp-block-columns .galerie h3 {
+  font-size: 45px;
+  color: #FF7A00;
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 768px) {
+  .wp-block-columns .galerie h3 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wp-block-columns .galerie h3 {
+    font-size: 30px;
+  }
+}
+
+.wp-block-columns .animal-sos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 500px;
+  background-color: #E16B53;
+}
+
+.wp-block-columns .animal-sos p {
+  font-size: 35px;
+  color: white;
+  line-height: 80px;
+  font-family: "Poppins";
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .wp-block-columns .animal-sos p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .wp-block-columns .animal-sos p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wp-block-columns .animal-sos p {
+    font-size: 25px;
+  }
+}
+
+.partenaires {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(http://localhost/refugeecureuilroux/wp-content/uploads/2021/06/halfcircle_pattern_rotate.png) center top repeat-x;
+  position: relative;
+  bottom: 48px;
+}
+
+.partenaires h4 {
+  font-size: 45px;
+  color: #FF7A00;
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+  font-family: "Benne";
+}
+
+@media screen and (max-width: 768px) {
+  .partenaires h4 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .partenaires h4 {
+    font-size: 30px;
+  }
+}
+
+.partenaires .wp-block-group__inner-container .wp-block-gallery {
+  -webkit-margin-before: 25px;
+          margin-block-start: 25px;
+}
+
+@media screen and (max-width: 599px) {
+  .partenaires .wp-block-group__inner-container .wp-block-gallery ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+}
+
+.partenaires .wp-block-group__inner-container .wp-block-gallery ul li figure img {
+  height: auto;
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 981px) {
+  .partenaires .wp-block-group__inner-container .wp-block-gallery ul li figure img {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .partenaires .wp-block-group__inner-container .wp-block-gallery ul li figure img {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

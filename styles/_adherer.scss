@@ -1,0 +1,254 @@
+// Section adhérer
+
+.adherer {
+    .wp-block-group__inner-container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $dark-orange;
+        position: relative;
+        top: -20px;
+
+        // Icone
+
+        i {
+            color: white;
+        }
+
+        //Titre
+
+        h2 {
+            font-size: 45px;
+            color: white;
+            font-family: $benne;
+            @media screen and (max-width: 768px) {
+                 font-size: 35px;   
+                }
+                @media screen and (max-width: 375px) {
+                     font-size: 30px;   
+                    }
+        }
+
+        // Introduction
+
+        p {
+            width: 30%;
+            text-align: center;
+            margin-block-start: 25px;
+            color: white;
+            font-size: 25px;
+            font-family: $poppins;
+            @media screen and (max-width: 874px) {
+                 font-size: 20px;
+                 width: 50%; 
+                }
+                @media screen and (max-width: 375px) {
+                     width: 80%;   
+                    }
+        }
+        // Bouton 
+
+        .wp-block-buttons{
+            margin-block-start: 25px;
+            .wp-block-button{
+                a{
+                    background-color: white;
+                    color: $light-orange;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    font-family: $poppins;
+                    &:hover{
+                        color: white;
+                        background-color: $dark-orange;
+                        border: 2px solid white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------------------
+
+// Section Faq adhérer
+
+.faq-adherer {
+    .wp-block-column {
+
+        // Pourquoi adhérer ?
+
+        .pourquoi {
+            .wp-block-group__inner-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 50%;
+                margin: auto;
+                @media screen and (max-width: 1035px) {
+                            width: 60%;
+                    }
+                    @media screen and (max-width: 768px) {
+                         width: 80%;   
+                        }
+
+                .wp-block-group {
+                    width: 100%;
+
+                    // Icone
+
+                    i {
+                        margin-block-start: 50px;
+                        color: $light-orange;
+                    }
+
+                    // Titre
+
+                    h3 {
+                        font-size: 35px;
+                        margin-block-start: 25px;
+                        color: $light-orange;
+                        font-family: $benne;
+                        @media screen and (max-width: 414px) {
+                    font-size: 24px;
+                        }
+                        @media screen and (max-width: 375px) {
+                             font-size: 25px;   
+                            }
+                    }
+                }
+
+                // Texte
+
+                p {
+                    font-size: 25px;
+                    line-height: 40px;
+                    margin-block-start: 25px;
+                    font-family: $poppins;
+                    @media screen and (max-width: 768px) {
+                         font-size: 20px;   
+                        }
+                }
+            }
+        }
+
+        // A quoi servira mon adhésion
+
+        .a-quoi {
+            .wp-block-column {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin: auto;
+
+                .wp-block-group {
+
+                    // Icone
+
+                    i {
+                        color: $light-orange;
+                        margin-block-start: 50px;
+                    }
+
+                    // Titre
+
+                    h3 {
+                        font-size: 35px;
+                        color: $light-orange;
+                        margin-block-start: 25px;
+                        font-family: $benne;
+                        @media screen and (max-width: 414px) {
+                            font-size: 24px;
+                        }
+                        @media screen and (max-width: 375px) {
+                            font-size: 25px;   
+                           }
+                    }
+                }
+
+                // Texte
+
+                p {
+                    font-size: 25px;
+                    width: 50%;
+                    margin-block-start: 25px;
+                    line-height: 40px;
+                    font-family: $poppins;
+                    @media screen and (max-width: 768px) {
+                        font-size: 20px;   
+                       }
+                       @media screen and (max-width: 440px) {
+                        width: 80%; 
+                       }
+                }
+            }
+        }
+    }
+}
+
+// Je veut aider
+
+.aider {
+    .wp-block-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+
+        i {
+            color: $light-orange;
+            margin-block-start: 50px;
+        }
+        h3{
+            font-size: 35px;
+            color: $light-orange;
+            margin-block-start: 25px;
+            font-family: $benne;
+            @media screen and (max-width: 414px) {
+                font-size: 24px;       
+            }
+            @media screen and (max-width: 375px) {
+                font-size: 25px;   
+               }
+        }
+        p{
+            font-size: 25px;
+            width: 50%;
+            margin-block-start: 25px;
+            line-height: 40px;
+            font-family: $poppins;
+            @media screen and (max-width: 768px) {
+                font-size: 20px;   
+               }
+               @media screen and (max-width: 440px) {
+                width: 80%;   
+               }
+        }
+    }
+}
+
+// Bouton Partager
+
+.share{
+    display: flex;
+    justify-content: center;
+    .wp-block-button{
+        a{
+            background-color: $dark-orange;
+            color: white;
+            transition: 0.3s;
+            font-family: $poppins;
+            &:hover{
+                background-color: white;
+                border: 1px solid $light-orange;
+                color: $light-orange;
+
+            }
+        }
+    }
+}

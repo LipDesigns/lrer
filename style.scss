@@ -1,0 +1,427 @@
+//Feuille de style et scripts
+/*
+Theme Name: Squirell
+Author: Filipe Veiga
+Description: un thème
+Version: 1.0
+Tags: blanc, noir, juif, musulman
+Text domain: nom du domaine
+*/
+
+// ------------------------------------------------
+
+@import './styles/variables';
+@import './styles/header';
+@import './styles/blog';
+@import './styles/adherer';
+@import './styles/galerie';
+@import './styles/contact';
+@import './styles/faq';
+@import './styles/footer';
+@import './styles/404';
+@import './styles/single';
+// ------------------------------------------------
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// -------------------------------------------------------------------------
+
+// Hero banner
+
+    .hero{
+        position: relative;
+        top: -20px;
+        .wp-block-column{
+            figure{
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+// ------------------------------------------------
+
+// Section Présentation site
+
+.presentation {
+
+    // Titre de la section
+    h2 {
+        font-size: 45px;
+        color: $light-orange;
+        font-family: $benne;
+        @media screen and (max-width: 768px) {
+             font-size: 40px;   
+            }
+            @media screen and (max-width: 414px) {
+                   font-size: 25px; 
+                }
+            @media screen and (max-width: 375px) {
+                 font-size: 30px;   
+                }
+    }
+
+    // Texte
+    p.has-text-align-center {
+        margin-block-start: 25px;
+        font-size: 25px;
+        width: 40%;
+        text-align: center;
+        margin: auto;
+        font-family: $poppins;
+        @media screen and (max-width: 768px) {
+             font-size: 20px;
+             width: 50% ;   
+            }
+            @media screen and (max-width: 414px) {
+                width: 70%;
+             }
+            @media screen and (max-width: 375px) {
+                 width: 80%;   
+                }
+    }
+
+    // Container avec blocs contenant toutes les icones et texte
+
+    .wp-block-columns {
+        width: 60%;
+        margin: auto;
+        margin-block-start: 80px;
+        @media screen and (max-width: 781px) {
+             display: flex;
+             flex-direction: column;   
+             align-items: center;
+            }
+        // Différents blocs
+
+        .wp-block-column {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+
+            // Icones
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                color: white;
+                background-color: $light-orange;
+                border-radius: 100px;
+                margin-block-start: 25px;
+            }
+
+            // Texte en dessous des icones
+            p {
+                margin-block-start: 25px;
+                font-size: 25px;
+                font-family:$poppins;
+                @media screen and (max-width: 375px) {
+                        font-size: 20px;
+                    }
+            }
+        }
+    }
+}
+
+// ------------------------------------------------
+
+// Article écureuil roux
+
+.wp-block-columns {
+    .ecureuil-roux {
+        width: 80%;
+        margin-block-start: 100px;
+
+        // Titre de l'article
+        h3 {
+            font-size: 45px;
+            color: $light-orange;
+            font-family: $benne;
+            @media screen and (max-width: 768px) {
+                 font-size: 35px;   
+                }
+                @media screen and (max-width: 375px) {
+                     font-size: 30px;   
+                    }
+        }
+
+        // Image
+        .wp-block-columns {
+            width: 60%;
+            margin: auto;
+            margin-block-start: 50px;
+            @media screen and (max-width: 768px) {
+                 width: 100%;   
+                }
+
+            figure {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            // 
+            .wp-block-column:nth-of-type(2) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align-items: center;
+
+                // Introduction
+                h4 {
+                    margin-block-end: 15px;
+                    font-size: 30px;
+                    font-family: $benne;
+                }
+
+                // Texte sur l'écureuil roux
+                p {
+                    width: 80%;
+                    font-family: $poppins;
+                    margin-block-end: 50px;
+                    font-size: 25px;
+                    @media screen and (max-width: 1024px) {
+                            font-size: 20px;
+                            width: 100%;
+                        }
+                        @media screen and (max-width: 768px) {
+                            font-size: 20px;
+                            width: 80%;   
+                            }
+                            @media screen and (max-width: 375px) {
+                                text-align: center;   
+                                }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------------------
+
+// Article Beatrice Vavasseur
+
+.beatrice {
+    .wp-block-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // Titre Article
+        h3 {
+            font-size: 45px;
+            color: $light-orange;
+            font-family: $benne;
+            @media screen and (max-width: 768px) {
+                    font-size: 35px;   
+                }
+                
+                @media screen and (max-width: 375px) {
+                     font-size: 30px;   
+                    }
+        }
+
+        // Intro beatrice
+        .intro-beatrice {
+            margin-block-start: 25px;
+            margin-block-end: 25px;
+            font-size: 25px;
+            width: 50%;
+            font-family: $poppins;
+            @media screen and (max-width: 768px) {
+                  font-size: 20px;  
+                }
+                @media screen and (max-width: 414px) {
+                    width: 65% ;
+                 }
+                @media screen and (max-width: 375px) {
+                     width: 80%;   
+                    }
+        }
+
+        // Image
+        figure {
+            @media screen and (max-width: 768px) {
+                 display: flex;
+                 justify-content: center;   
+                }
+            img {
+                border: 10px solid $light-orange;
+                @media screen and (max-width: 768px) {
+                     width: 50%;
+                     height: auto;   
+                    }
+            }
+        }
+
+        // Nom
+        .nom {
+            width: 100%;
+            text-align: center;
+            margin-block-end: 10px;
+            font-size: 25px;
+            font-family: $poppins;
+            @media screen and (max-width: 768px) {
+                 font-size: 20px;   
+                }
+        }
+
+        // Ligne entre le nom et le métier
+        hr {
+            background-color: $light-orange;
+            margin-bottom: 10px;
+            border: 0;
+            width: 100px;
+            height: 2px;
+        }
+
+        // Métier
+        .metier {
+            width: 100%;
+            text-align: center;
+            margin-block-end: 25px;
+            font-size: 20px;
+            font-family: $poppins;
+            @media screen and (max-width: 768px) {
+                 font-size: 15px;   
+                }
+        }
+
+        // Histoire
+        .histoire-beatrice {
+            width: 50%;
+            font-size: 25px;
+            font-family: $poppins;
+            @media screen and (max-width: 768px) {
+                 font-size: 20px;   
+                }
+                @media screen and (max-width: 414px) {
+                    width: 65%;
+                }
+                @media screen and (max-width: 375px) {
+                     width: 80%;   
+                    }
+        }
+    }
+}
+
+// ------------------------------------------------
+
+// Section Galerie
+
+.wp-block-columns {
+    .galerie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-block-end: 100px;
+        // Titre de la section
+        h3{
+            font-size: 45px;
+            color: $light-orange;
+            margin-block-end: 25px;
+            font-family: $benne;
+            @media screen and (max-width: 768px) {
+                    font-size: 35px;
+                }
+                @media screen and (max-width: 375px) {
+                        font-size: 30px;
+                    }
+        }
+    }
+}
+
+// ------------------------------------------------
+
+// Sos animaux
+.wp-block-columns{
+    .animal-sos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 500px;
+        background-color: $dark-orange;
+        p{
+            font-size: 35px;
+            color: white;
+            line-height: 80px;
+            font-family: $poppins;
+            width: 50%;
+            @media screen and (max-width: 768px) {
+                 font-size: 30px;  
+                }
+                @media screen and (max-width: 440px) {
+                        width: 100%;
+                    }
+                @media screen and (max-width: 375px) {
+                     font-size: 25px;   
+                    }
+        }
+    }
+}
+
+// ------------------------------------------------
+
+    .partenaires{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url(http://localhost/refugeecureuilroux/wp-content/uploads/2021/06/halfcircle_pattern_rotate.png) center top repeat-x;
+        position: relative;
+        bottom: 48px;
+        h4{
+            font-size: 45px;
+            color: $light-orange;
+            margin-block-start: 25px;
+            font-family: $benne;
+            @media screen and (max-width: 768px) {
+                 font-size: 35px;   
+                }
+                @media screen and (max-width: 375px) {
+                     font-size: 30px;   
+                    }
+        }
+        .wp-block-group__inner-container{
+            .wp-block-gallery{
+                margin-block-start: 25px;
+                ul{
+                    @media screen and (max-width: 599px) {
+                         display: flex;
+                         flex-direction: column;
+                         align-items: center; 
+                         margin: auto;  
+                        }
+                    li{
+                        figure{
+                            img{
+                            height: auto;
+                            padding: 0 30px;
+                            @media screen and (max-width: 981px) {
+                                    padding: 0;
+                                }
+                            @media screen and (max-width: 435px) {
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+

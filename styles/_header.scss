@@ -1,0 +1,362 @@
+// Call to action phone
+.phone {
+    top: 175px;
+    right: 0;
+    z-index: 3;
+    position: fixed;
+    background-color: $light-orange;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        justify-content: center;
+        height: 35px;
+        i {
+            color: #FFFFFF;
+            font-size: 1.25rem;
+            text-align: center;
+            padding-inline: 5px;
+        }
+
+
+
+
+
+//-------------------------------------------------
+        #telephone{
+            display: none;
+            p{
+                opacity: 0;
+                color: $light-orange;
+                font-size: 1.25rem;
+                text-align: center;
+                padding-inline-start: 5px;
+            }
+        }
+
+        // Animation 
+
+        .telephone { 
+            display: block !important;
+            animation: slide 0.3s;
+            p{
+                animation: apparition 0.3s ease-in-out 0.3s forwards;
+            }
+        }
+    }
+    @keyframes apparition {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes slide {
+        from{
+            width: 0%;
+        }
+        to{
+            width: 100%;
+        }
+    }
+}
+//--------------------------------------------------------------
+
+
+
+.phone:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px #000000;
+
+    i {
+        color: $light-orange;
+    }
+}
+
+// Animation Navbar Sticky
+
+
+header.sticky {
+    position: sticky;
+    top: 0;
+    background: none;
+    transition: 1s !important;
+
+    padding-bottom: 0;
+    
+    // Logo
+    .logo {
+        img {
+            width: 50px !important;
+            height: 50px !important;
+        }
+    }
+
+    .pre-nav {
+        h1{
+            color: white;
+            display: none;
+        }
+        hr {
+            display: none;
+        }
+    }
+
+    // Nav animate
+    nav {
+        background-color: rgba(225, 107, 83, 0.9);
+        transition: 1s;
+        .full-nav {
+            display: none;
+            animation:fadeOnSticky;
+            animation-fill-mode: both;
+            
+        
+            @media screen and (max-width: 768px) {
+                 display: none; 
+                }
+        }
+
+        // Overlay version animate
+        .overlay{
+            .overlay-content{
+                .menu-nav-container{
+                    ul{
+                        li{
+                            a{
+                                font-size: 60px; 
+                                @media screen and (max-width: 768px) {
+                                     font-size: 25px;   
+                                    }   
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        a.closebtn{
+            top: 1px;
+            @media screen and (max-width: 440px) {
+                    right: 15px;
+                }
+        }
+    }
+    // Btn burger version animation
+    .btn-burger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 45px;
+        color: white;
+        @media screen and (max-width: 440px) {
+                right: 15px;
+            }
+    }
+}
+
+// ---------------------------------------------------------
+
+// Header
+
+header {
+    background: url(http://lrer.lip-designs.com/wp-content/uploads/2021/06/halfcircle_pattern.png) center bottom repeat-x;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 30px;
+    // Navbar
+    nav {
+        background-color: white;
+
+        .pre-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // Logo du site
+            .logo{
+                img{
+                    transition: 1s;
+                }
+            }
+            //Titre du site    
+            h1 {
+                margin-block-start: 0;
+                margin-block-end: 0;
+                font-family: $benne;
+                font-size: 25px;
+            }
+
+            //Lignes sous le titre
+            hr {
+                background-color: $light-orange;
+                margin-bottom: 10px;
+                border: 0;
+            }
+
+            hr:nth-of-type(1) {
+                width: 100px;
+                height: 2px;
+            }
+
+            hr:nth-of-type(2) {
+                width: 50px;
+                height: 2px;
+            }
+        }
+
+
+        //    Navbar start
+
+        .full-nav {
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            .menu-nav-container {
+                ul {
+                    display: flex;
+                    justify-content: center;
+
+                    li {
+                        margin-block-start: 20px;
+                        padding-right: 20px;
+
+                        //Liens pages
+                        a {
+                            color: inherit;
+                            text-decoration: none;
+                            font-size: 25px;
+                            font-family: $poppins;
+                            &:hover{
+                                border-bottom: 2px solid $light-orange;
+                            }
+
+                            @media screen and (max-width: 1149px) {
+                                font-size: 15px;
+                            }
+
+                            &:hover {
+                                color: $light-orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Menu Burger mobile 
+        .btn-burger {
+            display: none;
+
+            @media screen and (max-width: 768px) {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+        }
+
+        // Overlay Menu open
+
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 50;
+            top: 0;
+            right: 0;
+            background-color: $dark-orange;
+            overflow-x: hidden;
+            transition: 0.3s;
+
+
+            .overlay-content {
+                position: relative;
+                height: 90%;
+                text-align: center;
+                margin: 0;
+
+                .menu-nav-container {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .menu {
+                        display: flex;
+                        justify-content: space-evenly;
+                        flex-direction: column;
+                        align-items: center;
+                        height: 80%;
+                        li {
+                            // Liens
+                            a {
+                                margin: 0;
+                                padding: 8px;
+                                text-decoration: none;
+                                font-size: 25px;
+                                color: white;
+                                display: block;
+                                transition: 0.3s;
+
+                                &:hover,
+                                &:focus {
+                                    border-bottom: 5px solid white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Bouton fermer burger
+        a.closebtn {
+            position: absolute;
+            z-index: 10;
+            top: 15px;
+            right: 15px;
+            font-size: 60px;
+            color: white;
+            text-decoration: none;
+            @media screen and (max-width: 768px) {
+                 top: 48px;   
+                }
+        }
+    }
+}
+
+.hero{
+        .wp-block-column{
+            figure{
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    @media screen and (max-width: 768px) {    
+                        height: 500px;
+                        }
+                }
+            }
+        }
+    }
+
+
+
+@keyframes fadeOnSticky{
+    0%{
+    display: block;
+    }
+    1%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
